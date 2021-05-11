@@ -32,10 +32,39 @@
                         <span>Registrar Pokemon</span>
                     </div>
                     <div class="card-body">
+                        <div class="mb-3">
+                            <label class="form-label" for="nombre-txt">Nombre: </label>
+                            <input class="form-control" id="nombre-txt" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="descripcion-txt">Descripcion: </label>
+                            <input class="form-control" id="descripcion-txt" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="legendario-rb">Legendario: </label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="legendario-rb" id="legendario-si">
+                                <label class="form-check-label" for="legendario-si">Si</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" name="legendario-rb" id="legendario-no" class="form-check-input">
+                                <label class="form-check-label" for="legendario-no">No</label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tipo-select" class="form-label">Tipo: </label>
+                            <select id="tipo-select" class="form-select">
+                                <option value="planta">Planta</option>
+                                <option value="fuego">Fuego</option>
+                                <option value="agua">Agua</option>
+                                <option value="normal">Normal</option>
+                            </select>
+                        </div>
 
                     </div>  
                     <div class="card-footer">
-
+                        <button type="button" class="btn btn-success" id="registrar-btn">Registrar</button>
+                        <button type="button" class="btn btn-info" id="limpiar-btn">Limpiar</button>
                     </div>  
                 </div>
             </div>
