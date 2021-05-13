@@ -1,7 +1,7 @@
 
 tinymce.init({
     selector: '#descripcion-txt',
-    height: 500,
+    height: 200,
     menubar: false,
     plugins: [
       'advlist autolink lists link image charmap print preview anchor',
@@ -18,6 +18,14 @@ tinymce.init({
   
 
 document.querySelector("#registrar-btn").addEventListener("click", ()=>{
+    //value es para obtener el valor de los input de texto//
     let nombre = document.querySelector("#nombre-txt").value;
-    console.log("Hola Mundo!", nombre);
+    //esto lo saque de la pagina del tinymce, es para obtener lo escrito//
+    let descripcion = tinymce.get("descripcion-txt").getContent();
+    //checked indica si el radiobuttom esta seleccionado//
+    let legendario = document.querySelector("#legendario-si").checked;
+    //el tipo se obtiene igual que los input//
+    let tipo = document.querySelector("#tipo-select").value
+    console.log("Hola Mundo!", nombre,descripcion,legendario,tipo);
+
 } );
